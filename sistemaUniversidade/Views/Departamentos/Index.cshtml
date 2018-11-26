@@ -1,0 +1,46 @@
+﻿@model IEnumerable<sistemaUniversidade.Models.Departamento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <h4 class="card-title">Listagem de departamento</h4>
+        <p>
+            @Html.ActionLink("Adicionar", "Create")
+        </p>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

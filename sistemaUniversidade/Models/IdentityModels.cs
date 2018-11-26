@@ -29,5 +29,13 @@ namespace sistemaUniversidade.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<sistemaUniversidade.Models.Estudante> Estudantes { get; set; }
+
+        public System.Data.Entity.DbSet<sistemaUniversidade.Models.Departamento> Departamentoes { get; set; }
+
+        public System.Data.Entity.DbSet<sistemaUniversidade.Models.Professor> Professors { get; set; }
+
+        public System.Data.Entity.DbSet<sistemaUniversidade.Models.Curso> Cursoes { get; set; }
     }
 }

@@ -22,9 +22,20 @@ namespace sistemaUniversidade
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/dashboard").Include(
+                    "~/Scripts/demo.js",
+                    "~/Scripts/paper-dashboard.min.js",
+                    "~/Scripts/paper-dashboard.js",
+                    "~/Scripts/chartjs.min.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/paper-dashboard.css",
+                      "~/Content/paper-dashboard.css.map",
+                      "~/Content/paper-dashboard.min.css",
+                      "~/Content/demo.css",
                       "~/Content/site.css"));
         }
     }
 }
+
